@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ctrl+Alt+Golpe · Detector de golpes e phishing para mensagens em português</title>
+  <meta name="description" content="Projeto aberto que ajuda pessoas a identificar golpes e phishing em mensagens em português. Hack Brasil 2026, trilha Cibersegurança.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1b1f24;
+      --muted: #59636e;
+      --accent: #0b6e4f;
+      --card: #f3f6f4;
+      --border: #d5dcd8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101412;
+        --text: #e8ece9;
+        --muted: #a2aca6;
+        --accent: #4fd1a1;
+        --card: #1a201d;
+        --border: #2d3733;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    h1 { font-size: 2.25rem; margin: 0 0 0.25rem; }
+    h2 { font-size: 1.3rem; margin: 2.5rem 0 0.5rem; }
+    .lead { font-size: 1.15rem; color: var(--muted); margin: 0 0 1rem; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--card);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.4rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Ctrl+Alt+Golpe</h1>
+      <p class="lead">Detector de golpes e phishing para mensagens em português.</p>
+      <span class="badge">Projeto em construção · Hack Brasil 2026 · Trilha Cibersegurança</span>
+    </header>
+
+    <section>
+      <h2>O problema</h2>
+      <p>Golpes por mensagem, como falsos avisos de entrega, “chave Pix bloqueada” e falsos atendentes de banco, chegam todos os dias por SMS, WhatsApp e e-mail. Muita gente não tem como conferir rapidamente se uma mensagem é segura.</p>
+    </section>
+
+    <section>
+      <h2>O que o projeto faz</h2>
+      <p>A pessoa cola uma mensagem ou link suspeito e recebe:</p>
+      <ul>
+        <li>um nível de risco: parece golpe, suspeito ou parece seguro;</li>
+        <li>os sinais que levantaram o alerta, em linguagem simples;</li>
+        <li>o que fazer em seguida.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Para quem é</h2>
+      <p>Para qualquer pessoa que recebe mensagens suspeitas no dia a dia e não tem conhecimento técnico para avaliá-las.</p>
+    </section>
+
+    <section>
+      <h2>Como funciona</h2>
+      <ol>
+        <li>A mensagem é limpa e organizada.</li>
+        <li>Regras simples procuram sinais comuns de golpe, como link encurtado, urgência e pedido de pagamento, senha ou código.</li>
+        <li>Um modelo de aprendizado de máquina estima a chance de a mensagem ser golpe.</li>
+        <li>O resultado combina os dois e mostra o nível de risco com os motivos.</li>
+      </ol>
+      <p>Nenhuma mensagem colada será armazenada.</p>
+    </section>
+
+    <section>
+      <h2>Projeto aberto</h2>
+      <div class="card">
+        <p>O código, as fontes de dados documentadas e o método de avaliação ficam públicos no GitHub, com métricas e limitações declaradas, para que qualquer pessoa possa conferir como o detector decide.</p>
+        <p><a href="https://github.com/AnaCarolinaQueiroz/ctrl-alt-golpe">Ver o repositório no GitHub</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Aviso</h2>
+      <p>Esta ferramenta é um apoio, não uma garantia. Na dúvida, confirme pelo canal oficial da empresa e nunca passe senhas ou códigos recebidos por mensagem.</p>
+    </section>
+
+    <footer>
+      Feito por Ana Carolina Queiroz para o Hack Brasil 2026.
+    </footer>
+  </main>
+</body>
+</html>
